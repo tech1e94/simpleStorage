@@ -4,7 +4,7 @@
 pragma solidity 0.8.24;
 
 contract FirstContract {
-    int64 num;
+    uint256 public num;
 
     // array
     uint64[] array = [1, 2, 3];
@@ -22,13 +22,13 @@ contract FirstContract {
     person[3] public staticArray;
 
     // update function
-    function UpdateNum(int64 _num) public virtual {
+    function UpdateNum(uint256 _num) public virtual {
         // means that child proces can override this function
         num = _num;
     }
 
     // retrive function - doesnt use much gas
-    function retriveNum() public view returns (int64) {
+    function retriveNum() public view returns (uint256) {
         return num;
     }
 
